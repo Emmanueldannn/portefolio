@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Fiches Réalisations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            text-align: center;
+        }
+        .fiches-realisation {
+            color: #ff6f61;
+            text-align: center;
+            padding: 20px;
+        }
+        .cv-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .cv-box {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .cv-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cv-box img {
+            width: 50px;
+            height: 50px;
+        }
+		.back-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #ff4e3d;
+        }
+		.back-button {
+    display: block;
+    text-align: center;
+    margin: 30px auto; /* Centrage horizontal */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 200px; /* Largeur fixe pour bien centrer */
+    text-align: center;
+}
+    </style>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+<body>
+
+<h2 class="fiches-realisation">Mes Fiches Réalisations</h2>
+
+
+<h3>Fiche réalisation en cours</h3>
+<div class="cv-container">
+    <div class="cv-box" onclick="navigateTo('ficheglpi.html')"><img src="GLPI.png" alt="Logo 1"><h4>Fiche réalisation GLPI</h4></div>
+    <div class="cv-box" onclick="navigateTo('ficheocs.html')"><img src="OCS.png" alt="Logo 2"><h4>Fiche réalisation OCS</h4></div>
+    <div class="cv-box" onclick="navigateTo('realisationzimbra.html')"><img src="Zimbra.png" alt="Logo 3"><h4>Fiche réalisation Zimbra</h4></div>
+    <div class="cv-box" onclick="navigateTo('realisationowncloud.html')"><img src="OwnCloud.png" alt="Logo 4"><h4>Fiche réalisation OwnCloud</h4></div>
+	<div class="cv-box" onclick="navigateTo('realisationnagios.html')"><img src="nagios.png" alt="Logo 5"><h4>Fiche réalisation Nagios</h4></div>
+    <div class="cv-box" onclick="navigateTo('page6.html')"><img src="logo6.png" alt="Logo 6"><h4>Titre 6</h4></div>
+</div>
+
+<h3>Fiche réalisation entreprise</h3>
+<div class="cv-container">
+    <div class="cv-box" onclick="navigateTo('reapro.html')"><img src="pc.png" alt="Logo 7"><h4>Fiche réalisation pro 1: Projet roadmap</h4></div>
+    <div class="cv-box" onclick="navigateTo('reapro2.html')"><img src="intune.png" alt="Logo 8"><h4>Fiche réalisation pro 2: Intune </h4></div>
+    <div class="cv-box" onclick="navigateTo('reapro3.html')"><img src="usb.png" alt="Logo 9"><h4>Fiche réalisation pro 3: PKI</h4></div>
+    <div class="cv-box" onclick="navigateTo('reapro4.html')"><img src="user.png" alt="Logo 10"><h4>Fiche réalisation pro 4: Nouvel arivant</h4></div>
+    <div class="cv-box" onclick="navigateTo('master.html')"><img src="logiciel.png" alt="Logo 11"><h4>Fiche réalisation pro 5: Masterisation des PC</h4></div>
+    <div class="cv-box" onclick="navigateTo('page12.html')"><img src="logo12.png" alt="Logo 12"><h4>Titre 12</h4></div>
+	 <a href="test.html" class="back-button">Retour au Portfolio</a>
+</div>
+
+</body>
+</html>

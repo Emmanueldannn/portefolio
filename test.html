@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff6f61, #ffcc00);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+		/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Conteneur principal */
+.contact-container {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Titre principal */
+.contact-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+/* Sous-titre */
+.contact-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Champs du formulaire */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #ff6f61;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Labels flottants */
+.input-group label {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #aaa;
+    transition: 0.3s ease;
+}
+
+/* Effet focus */
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+    top: 5px;
+    left: 35px;
+    font-size: 12px;
+    color: #ff6f61;
+}
+
+/* Bouton stylisé */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff6f61, #ff4f42);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form button i {
+    margin-right: 10px;
+}
+
+/* Effet hover */
+.contact-form button:hover {
+    background: #ff4f42;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+        header h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        nav {
+            background: #444;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 18px 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: #ff6f61;
+            transform: translateY(-5px);
+        }
+
+        section {
+            padding: 60px 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .intro, .projects {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .intro h2, .projects h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ff6f61;
+            animation: fadeIn 2s ease-out;
+        }
+		
+
+        .intro p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Section Projets */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+		.card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.card-content {
+    flex: 1;
+    text-align: left;
+}
+
+        .project {
+            background: #fff;
+            border-radius: 8px; /* Coins arrondis réduits */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 70%; /* Réduction de la largeur */
+            height: 180px; /* Réduction de la hauteur */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            font-size: 1rem; /* Taille de texte plus petite */
+            color: #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            color: #ff6f61;
+            font-size: 1.3rem; /* Titre plus petit */
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 0.9rem; /* Texte de description plus petit */
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects {
+                align-items: flex-start;
+            }
+
+            .project {
+                width: 85%; /* Ajusté pour les petits écrans */
+                height: 160px; /* Taille encore plus réduite sur petits écrans */
+            }
+			.contact-container {
+    background-color: #ff6f61; /* Couleur de fond */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto; /* Centre la fiche */
+    text-align: center;
+}
+
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mon Portfolio Emmanuel CONTAOI</h1>
+    </header>
+
+    <nav>
+        <a href="#intro">À propos</a>
+        <a href="#projects">Projets</a>
+		<a href="#name">contact</a>
+    </nav>
+
+    <section id="intro" class="intro">
+        <h2>À propos de moi</h2>
+        <p>
+
+     Je m'appelle Emmanuel Contaoi, étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO) option SISR (Solutions d’Infrastructure, Systèmes et Réseaux). Actuellement en alternance, j’évolue au sein d’Orange en tant que technicien support informatique. Grâce à cette expérience, j’acquiers des compétences techniques solides tout en développant mon sens du service et ma capacité à résoudre des problématiques IT. Mon parcours est également enrichi par plusieurs expériences professionnelles qui m’ont permis de renforcer mon expertise et mon adaptabilité dans le domaine de l’informatique.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Mes Projets</h2>
+        <div class="project">
+            <h3>Mon CV</h3>
+            <p>Vous trouverez dans cette page tout mon parcours scolaire et professionnel résumé en un CV.</p>
+			 <a href="cv.html" style="color: #ff6f61; text-decoration: none;">Voir le cv</a>
+        </div>
+        <div class="project">
+            <h3>Fiches réalisations professionelles </h3>
+            <p>toute mes fiches réalisations en entreprise et en école qui vont résumer les divers missions faites.</p>
+			 <a href="realisation.html" style="color: #ff6f61; text-decoration: none;">Voir les fiches réalisations</a>
+        </div>
+        <div class="project">
+            <h3>Fiche de synthese</h3>
+            <p>les points forts que j'ai pu validé lors de mon parcours.</p>
+			<a href="fiche synthese.html" style="color: #ff6f61; text-decoration: none;">Voir fiche synthese</a>
+        </div>
+        <div class="project">
+            <h3>Veille technologie</h3>
+            <p>Courte présentation powerpoint porté sur le sujet du "PHISHING".</p>
+			<a href="vt.html" style="color: #ff6f61; text-decoration: none;">Voir ma veille technologique</a>
+        </div>
+        <div class="project">
+            <h3>Documentations des plateformes.</h3>
+            <p>Documentations des plateformes réalisé en cours détaillant chaque étapes et détails.</p>
+        </div>
+
+<div class="contact-container">
+    <h2 class="contact-title">Contactez-moi</h2>
+    <p class="contact-subtitle">Une question, une opportunité ? Envoyez-moi un message.</p>
+    <form
+  action="https://formspree.io/f/myzeybkn"
+  method="POST"
+>
+    <form class="contact-form">
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name" required>
+            <label for="name">Nom</label>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-comment"></i>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Message</label>
+        </div>
+
+        <button type="submit">
+            <i class="fas fa-paper-plane"></i> Envoyer
+        </button>
+    </form>
+</div>
+
+
+
+<!-- FontAwesome pour les icônes -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+		
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
